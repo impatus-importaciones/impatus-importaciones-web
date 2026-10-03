@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://impatusimportaciones.com/sitemap.xml
