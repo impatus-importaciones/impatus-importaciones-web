@@ -6,6 +6,16 @@ menuToggle?.addEventListener("click", () => {
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
 });
+const brandSymbol = document.querySelector("#brand-symbol");
+
+if (brandSymbol) {
+  const footerSymbol = brandSymbol.cloneNode(true);
+  footerSymbol.removeAttribute("id");
+  footerSymbol.setAttribute("aria-hidden", "true");
+  document
+    .querySelector(".footer-brand .brand-mark")
+    ?.replaceWith(footerSymbol);
+}
 
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
